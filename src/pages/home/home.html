@@ -1,14 +1,35 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>{{title}}</h3>
+<ion-content padding text-center>
 
-  
+	<img src="assets/imgs/canchasQuilla.png" style="height: 120px;width: 150px;">
+	<ion-list no-lines>
+
+	    <ion-item  >
+
+	      <ion-input  round type="text" placeholder="Username" name="username" #username></ion-input>
+
+	    </ion-item>
+
+	    <ion-item>
+
+	      <ion-input type="password" placeholder="Password" name="password" #password></ion-input>
+
+	    </ion-item>
+
+	    <button ion-button round block (click)="signIn()" color="secondary">Sign In</button>
+
+	    <button ion-button round outline block (click)="signUp()" color="secondary">Register</button>
+
+	</ion-list>
+
+
+
 </ion-content>
